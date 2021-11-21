@@ -20,5 +20,9 @@ public class UserController {
         return ResponseEntity.ok("Hello " + username);
     }
 
-
+    /*
+    * TODO
+    *  Add custom login path
+    *  Probably add refresh token logic
+    * */
 }
