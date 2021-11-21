@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/register")
+    @PostMapping("/sign_up")
     public ResponseEntity save(@RequestParam String username, @RequestParam String password){
 
         userService.save(username,password);
@@ -20,9 +20,5 @@ public class UserController {
         return ResponseEntity.ok("Hello " + username);
     }
 
-    @PostMapping("/login")
-    public ResponseEntity login(@RequestParam String username, @RequestParam String password){
-        userService.loadUserByUsername(username);
-        return ResponseEntity.ok("");
-    }
+
 }
