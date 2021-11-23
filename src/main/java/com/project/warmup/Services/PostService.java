@@ -30,10 +30,8 @@ public class PostService {
         post.get().setDate(updated.getDate());
     }
 
-    public Optional<Post> getById(Long id) throws Exception{
+    public Optional<Post> getById(Long id){
         Optional<Post> post = postRepository.findById(id);
-
-        if(post.isEmpty()) throw new Exception("Post with " + id + "doesn't exist");
 
         return post;
     }
